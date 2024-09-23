@@ -180,8 +180,11 @@ public class FrmManteProd extends JFrame {
 		Producto p = new Producto();
 		p.setId_prod(txtCodigo.getText());
 		p.setDes_prod(txtDescripcion.getText());
-		
-		
+		p.setStk_prod(Integer.parseInt(txtStock.getText()));
+		p.setPre_prod(Double.parseDouble(txtPrecio.getText()));
+		p.setIdcategoria(cboCategorias.getSelectedIndex());
+		p.setEst_prod(2);
+		p.setIdproveedor(cboProveedores.getSelectedIndex());
 		
 		try {
 			em.getTransaction().begin(); //registrar, actualizar o eliminar
